@@ -1,0 +1,29 @@
+[
+  {
+    "file": "blocktypes/watermill-axle",
+    "side": "server",
+    "op": "add",
+    "path": "/class",
+    "value": "sfblockaxle",
+    "dependsOn": [{ "modid": "sfanimationlibrary" }]
+  },
+  {
+    "file": "blocktypes/watermill-axle",
+    "side": "server",
+    "op": "add",
+    "path": "/entityclass",
+    "value": "Generic",
+    "dependsOn": [{ "modid": "sfanimationlibrary" }]
+  },
+  {
+    "file": "blocktypes/watermill-axle",
+    "side": "server",
+    "op": "add",
+    "path": "/entityBehaviors",
+    "value": [
+      {
+        "name": "sfbebblockmpaxle"
+      }
+    ]
+  }
+]

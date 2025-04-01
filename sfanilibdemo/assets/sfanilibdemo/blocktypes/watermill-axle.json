@@ -1,0 +1,109 @@
+{
+  "code": "watermillaxle",
+  //"class": "sfblockaxle",
+  //"entityClass": "Generic",
+  //"entityBehaviors": [{ "name": "sfbebblockmpaxle" }],
+  "behaviors": [
+    { "name": "Pillar", "properties": { "invertedPlacement": true } }
+  ],
+  "attributes": {
+    "rotationSound": "game:sounds/block/riftward", //the sound to play when the block is rotating, remove or set to "" for no sound
+    "rotationSoundVolume": 0.3, // rotation volume
+    "handbook": {
+      "groupBy": ["watermillaxle-*"]
+    }
+  },
+  "creativeinventory": {
+    "general": ["*-ud"],
+    "mechanics": ["*-ud"],
+    "sfanimlibdemo": ["*-ud"]
+  },
+  "variantgroups": [{ "code": "rotation", "states": ["ud", "ns", "we"] }],
+  "shapeByType": {
+    "*-ns": { "base": "block/watermill-block", "rotateZ": 90 },
+    "*-ud": { "base": "block/watermill-block", "rotateX": 90 },
+    "*-we": { "base": "block/watermill-block", "rotateY": 90 }
+  },
+  "textures": {
+    "debarked": { "base": "debarked" },
+    "debarkedm": { "base": "debarkedm" },
+    "debarkedp": { "base": "debarkedp" },
+    "littleplanks": { "base": "littleplanks" },
+    "slaves": { "base": "slaves" },
+    "special2": { "base": "special2" },
+    "null": { "base": "special2" }
+  },
+
+  "blockmaterial": "Wood",
+  "materialDensity": 450,
+  "sidesolid": {
+    "all": false
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "rainPermeable": true,
+  "resistance": 3.5,
+  "lightAbsorption": 0,
+  "maxStackSize": 16,
+  "drops": [
+    { "type": "block", "code": "watermillaxle-ud", "quantity": { "avg": 1 } }
+  ],
+  "tpHandTransform": {
+    "translation": { "x": -1.23, "y": -0.91, "z": -1.8 },
+    "rotation": { "x": 14, "y": -11, "z": -70 },
+    "scale": 0.34
+  },
+  "guiTransform": {
+    "rotation": { "x": -19, "y": -10, "z": 0 },
+    "origin": { "x": 0.6, "y": 0.5, "z": 0.5 },
+    "scale": 0.5299
+  },
+  "groundTransform": {
+    "translation": { "x": 0, "y": 0.1, "z": 0 },
+    "rotation": { "x": 83, "y": -60, "z": -5 },
+    "origin": { "x": 0.5, "y": 0, "z": 0.5 },
+    "scale": 1.5
+  },
+  "collisionSelectionBoxByType": {
+    "x1": 0,
+    "y1": 0,
+    "z1": 0,
+    "x2": 1,
+    "y2": 1,
+    "z2": 1
+  },
+  "particleCollisionBoxByType": {
+    "*-we": {
+      "x1": 0,
+      "y1": 0,
+      "z1": 0.375,
+      "x2": 1,
+      "y2": 0.625,
+      "z2": 0.625
+    },
+    "*-ns": {
+      "x1": 0,
+      "y1": 0,
+      "z1": 0.375,
+      "x2": 1,
+      "y2": 0.625,
+      "z2": 0.625,
+      "rotateY": 90
+    },
+    "*-ud": {
+      "x1": 0.375,
+      "y1": 0,
+      "z1": 0.375,
+      "x2": 0.625,
+      "y2": 1,
+      "z2": 0.625
+    }
+  },
+  "sounds": {
+    "hit": "game:block/planks",
+    "break": "game:block/planks",
+    "place": "game:block/planks",
+    "walk": "game:walk/wood"
+  }
+}

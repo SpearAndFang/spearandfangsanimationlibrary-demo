@@ -1,0 +1,18 @@
+[
+  {
+    "file": "blocktypes/watermill-animutil",
+    "side": "server",
+    "op": "add",
+    "path": "/class",
+    "value": "sfblockanimated",
+    "dependsOn": [{ "modid": "sfanimationlibrary" }]
+  },
+  {
+    "file": "blocktypes/watermill-animutil",
+    "side": "server",
+    "op": "add",
+    "path": "/entityclass",
+    "value": "sfbeblockanimated",
+    "dependsOn": [{ "modid": "sfanimationlibrary" }]
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "game:tabname-sfanimlibdemo": "S&F Anim Lib",
+  "block-watermillblock-*": "water mill (block type)",
+  "blockdesc-watermillblock-*": "a demo using simple block rotations",
+  "block-watermillanimutil-*": "water mill (animutil type)",
+  "blockdesc-watermillanimutil-*": "a demo using the animutil and shape keyframes",
+  "block-watermillaxle-*": "water mill (axle type)",
+  "blockdesc-watermillaxle-*": "a demo using the custom mp class",
+  "block-grindstone-*": "Grindstone",
+  "blockdesc-grindstone-*": "Sharpen your tools"
+}

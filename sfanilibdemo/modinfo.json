@@ -1,0 +1,9 @@
+{
+  "type": "content",
+  "modid": "sfanilibdemo",
+  "name": "SpearAndFang's Animation Library Demo",
+  "authors": ["SpearAndFang", "Ruddi", "BluryFace"],
+  "description": "Just a demo",
+  "version": "0.0.5",
+ // "dependencies": { "sfanimationlibrary": "" }
+}

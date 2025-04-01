@@ -1,0 +1,93 @@
+{
+  "code": "grindstone",
+  "class": "sfblockanimated",
+  "entityClass": "sfbeblockanimated",
+  "attributes": {
+    "rotationSound": "game:sounds/block/riftward", //the sound to play when the block is rotating, remove or set to "" for no sound
+    "switchSound": "sfanilibdemo:sounds/tswitch", //remove or set to "" for no sound (or if switchEnabled is false)
+    "switchEnabled": true, // if false the block will always rotate, if true you can click on block to toggle animation
+    "easeInSpeedModifier": 1.0, //animation ease in speed multiplier
+    "easeOutSpeedModifier": 2.0, //animation ease out speed multiplier
+    "animationSpeed": 0.7, //animation speed
+    "animatorName": "grindstoneanimator", // this must be anything but unique for this block
+    "animationName": "roll"
+  },
+  "behaviors": [
+    {
+      "name": "HorizontalOrientable",
+      "properties": { "dropBlockFace": "north" }
+    }
+  ],
+  "variantgroups": [
+    {
+      "code": "side",
+      "loadFromProperties": "abstract/horizontalorientation"
+    }
+  ],
+  "entityBehaviors": [{ "name": "Animatable" }],
+  "creativeinventory": { "general": ["*-north"], "sfanimlibdemo": ["*-north"] },
+  "drawtype": "json",
+  "shape": {
+    "base": "block/grindstone",
+    "rotateYByType": {
+      "*-north": 0,
+      "*-east": 270,
+      "*-south": 180,
+      "*-west": 90
+    }
+  },
+  "textures": {
+    "blackbronze": { "base": "game:item/tool/material/blackbronze" },
+    "handle": { "base": "game:item/tool/material/handle" },
+    "wood": { "base": "game:item/tool/material/wood" },
+    "brass": { "base": "game:item/tool/material/brass" },
+    "woodenclub": { "base": "game:item/tool/material/woodenclub" },
+    "andesite": { "base": "game:item/tool/material/andesite" }
+  },
+  "blockmaterial": "Wood",
+  "replaceable": 900,
+  "lightAbsorption": 0,
+  "resistance": 3,
+  "sideopaque": {
+    "all": false
+  },
+  "sideao": { "all": false },
+  "sounds": {
+    "place": "game:block/planks",
+    "walk": "game:walk/wood"
+  },
+  //"heldTpIdleAnimation": "holdbothhandslarge",
+  //"heldRightReadyAnimation": "heldblockready",
+  //"heldTpUseAnimation": "twohandplaceblock",
+  "tpHandTransform": {
+    "translation": { "x": -1.23, "y": -0.91, "z": -1.8 },
+    "rotation": { "x": 88, "y": -30, "z": -70 },
+    "scale": 0.52
+  },
+  "guiTransform": {
+    "origin": { "x": 0.5, "y": 0.4, "z": 0.5 },
+    "scale": 1.48
+  },
+  "groundTransform": {
+    "translation": { "x": 0, "y": 0.1, "z": 0 },
+    "rotation": { "x": -7, "y": -82, "z": -82 },
+    "origin": { "x": 0.5, "y": 0, "z": 0.5 },
+    "scale": 3.67
+  },
+  "selectionBox": {
+    "x1": 0.125,
+    "y1": 0,
+    "z1": 0.125,
+    "x2": 0.875,
+    "y2": 1,
+    "z2": 0.875
+  },
+  "collisionBox": {
+    "x1": 0.125,
+    "y1": 0,
+    "z1": 0.125,
+    "x2": 0.875,
+    "y2": 1,
+    "z2": 0.875
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "code": "watermillblock",
+  //"class": "sfblockrotate",
+  //"entityclass": "sfbeblockrotate",
+  "attributes": {
+    "rotationSound": "game:sounds/block/riftward", //the sound to play when the block is rotating, remove or set to "" for no sound
+    "rotationSoundVolume": 0.3, // rotation volume
+    "switchSound": "sfanilibdemo:sounds/tswitch", //remove or set to "" for no sound (or if switchEnabled is false)
+    "switchSoundVolume": 0.5, // switch volume
+    "rotationAxis": "z", // which axis is rotating? x,y, or z
+    "switchEnabled": true, // if false the block will always rotate, if true you can click on block to toggle animation
+    "updateFrequency": 35.0, //update Frequency ms
+    "rotationMultiplier": 0.5, //how fast it rotates
+    "handbook": {
+      "groupBy": ["watermillblock-*"]
+    }
+  },
+  "behaviors": [
+    {
+      "name": "HorizontalOrientable",
+      "properties": { "dropBlockFace": "north" }
+    }
+  ],
+  "variantgroups": [
+    {
+      "code": "side",
+      "loadFromProperties": "abstract/horizontalorientation"
+    }
+  ],
+  "creativeinventory": { "general": ["*-north"], "sfanimlibdemo": ["*-north"] },
+  "drawtype": "json",
+  "shape": {
+    "base": "block/watermill-block",
+    "rotateYByType": {
+      "*-north": 0,
+      "*-east": 270,
+      "*-south": 180,
+      "*-west": 90
+    }
+  },
+  "textures": {
+    "debarked": { "base": "debarked" },
+    "debarkedm": { "base": "debarkedm" },
+    "debarkedp": { "base": "debarkedp" },
+    "littleplanks": { "base": "littleplanks" },
+    "slaves": { "base": "slaves" },
+    "special2": { "base": "special2" },
+    "null": { "base": "special2" }
+  },
+  "blockmaterial": "Wood",
+  "replaceable": 900,
+  "lightAbsorption": 0,
+  "resistance": 3,
+  "sideopaque": {
+    "all": false
+  },
+  "sideao": { "all": false },
+  "sounds": {
+    "place": "game:block/planks",
+    "walk": "game:walk/wood"
+  },
+  "rainPermeable": true,
+  "maxStackSize": 16,
+  "drops": [
+    {
+      "type": "block",
+      "code": "watermillblock-north",
+      "quantity": { "avg": 1 }
+    }
+  ],
+  "heldTpIdleAnimation": "holdbothhandslarge",
+  "heldRightReadyAnimation": "heldblockready",
+  "heldTpUseAnimation": "twohandplaceblock",
+  "tpHandTransform": {
+    "translation": { "x": -1.23, "y": -0.91, "z": -1.8 },
+    "rotation": { "x": 14, "y": -11, "z": -70 },
+    "scale": 0.34
+  },
+  "guiTransform": {
+    "rotation": { "x": -22.6, "y": 44, "z": 0 },
+    "scale": 0.5299
+  },
+  "groundTransform": {
+    "translation": { "x": 0, "y": 0.1, "z": 0 },
+    "rotation": { "x": 83, "y": -60, "z": -5 },
+    "origin": { "x": 0.5, "y": 0, "z": 0.5 },
+    "scale": 1.5
+  },
+  "selectionBox": {
+    "x1": 0.125,
+    "y1": 0,
+    "z1": 0.125,
+    "x2": 0.875,
+    "y2": 1,
+    "z2": 0.875
+  },
+  "collisionBox": {
+    "x1": 0.125,
+    "y1": 0,
+    "z1": 0.125,
+    "x2": 0.875,
+    "y2": 1,
+    "z2": 0.875
+  }
+}
